@@ -38,7 +38,7 @@ RUN export workingDir=${PWD} && \
     cmake \
         -DCMAKE_INSTALL_PREFIX=${workingDir}/install \
         ../ANTs 2>&1 | tee cmake.log && \
-    make -j 2 2>&1 | tee build.log && \
+    make -j 4 2>&1 | tee build.log && \
     cd ANTS-build && \
     make install 2>&1 | tee install.log
 # Add ANTs to PATH environment variable
