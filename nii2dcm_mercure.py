@@ -44,8 +44,9 @@ def find_json_for_nifti(nifti_path):
     directory = os.path.dirname(nifti_path)# Extract the directory of the NIfTI file
     search_pattern = os.path.join(directory, '*.json') # Construct the search pattern for JSON files in the same directory
     json_files = glob.glob(search_pattern)# Find all JSON files in the directory
-    json_files.sort()    # Sort the list of files to ensure we are picking the last one
+    json_files.sort()# Sort the list of files to ensure we are picking the last one
     if json_files:
+        print(f"Found {len(json_files)} JSON files corresponding to the NIfTI file. Selecting the last one, i.e., '{json_files[-1]}'.")
         return json_files[-1] # Select the last JSON file in the list, if any are present
     else:
         print("No JSON file found corresponding to the NIfTI file.")

@@ -1,9 +1,18 @@
 import sys
 import os
 import glob
+import pprint
 from dcm2nii_mercure import convert_dicom_to_nifti
 from nii2dcm_mercure import convert_nifti_to_dicom
 from ants_motionCorrection import run_antsMotionCorr
+
+
+def pretty_print_args(*args, **kwargs):
+    print("Arguments given to the function:")
+    pprint.pprint(args)
+    print("Keyword arguments given to the function:")
+    pprint.pprint(kwargs)
+
 
 def main():
     if len(sys.argv) != 3:
@@ -28,8 +37,6 @@ def main():
         sys.exit(1)
     nii_temp_file = nii_files[-1]
 
-
-
     ## processing module
     try:
         print("Processing NIfTI file...")
@@ -41,13 +48,14 @@ def main():
         print(f"An error occurred during processing: {e}")
         return
 
-
     ## nii2dcm module
     try:
         convert_nifti_to_dicom(dicom_in_folder, nii_temp_file_out, output_dir)
         print("NIfTI to DICOM conversion completed successfully.")
     except Exception as e:
         print(f"An error occurred during NIfTI to DICOM conversion: {e}")
+        print("--------------------------------------------------------------------------------")
+        pretty_print_args(dicom_in_folder, nii_temp_file_out, output_dir)
 
 
 if __name__ == "__main__":
