@@ -3,10 +3,10 @@ import subprocess
 
 def run_antsMotionCorr(input_nifti, base_output_dir):
     original_cwd = os.getcwd()
-    print(f"Original working directory: {os.getcwd()}")
+    #print(f"Original working directory: {os.getcwd()}")
     writable_temp_dir = "/tmp"
     os.chdir(writable_temp_dir)
-    print(f"Changed working directory to: {os.getcwd()}")
+    #print(f"Changed working directory to: {os.getcwd()}")
 
     # ANTs Motion Correction
     output_prefix = f"{base_output_dir}/motcorr"
@@ -20,6 +20,6 @@ def run_antsMotionCorr(input_nifti, base_output_dir):
         print(f"Error output:\n{e.stderr.decode()}")
     finally:
         os.chdir(original_cwd)
-        print(f"Changed working directory back to: {os.getcwd()}")
+        #print(f"Changed working directory back to: {os.getcwd()}")
 
     return f"{output_prefix}.nii.gz"

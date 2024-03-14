@@ -40,8 +40,8 @@ def main():
     ## processing module
     try:
         print("Processing NIfTI file...")
-        print(f"Input NIfTI file: {nii_temp_file}")
-        print(f"Output folder: {output_dir}")
+        #print(f"Input NIfTI file: {nii_temp_file}")
+        #print(f"Output folder: {output_dir}")
         nii_temp_file_out = run_antsMotionCorr(nii_temp_file, nii_temp_folder)
         print("Processing completed successfully.")
     except Exception as e:
