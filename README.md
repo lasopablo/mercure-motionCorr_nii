@@ -19,19 +19,19 @@ Mercure is a robust web-based orchestration system designed to manage and monito
 
 To get started with Mercure, clone this repository (or download from Docker) and follow the setup instructions provided in the [official Mercure documentation](https://mercure-imaging.org/docs/#).
 
-## Screenshots
+## GUI
 
 ### System Status
 
 ![System Status](imgs/status.png)
 
-This screenshot displays the system status overview of the Mercure web application. It shows the operational status of various services and server health in terms of disk space availability.
+The main page displays the system status overview of the Mercure web application. It shows the operational status of various services and server health in terms of disk space availability.
 
 ### Routing Configuration
 
 ![Routing Configuration](imgs/routing.png)
 
-This screenshot demonstrates how Mercure is connected to the Orthanc server. It provides detailed configuration options for DICOM nodes, including TLS security settings.
+The server must be connected to the Orthanc server, where the processed images can be finally downloaded. It provides detailed configuration options for DICOM nodes, including TLS security settings.
 
 ## Contributions
 
