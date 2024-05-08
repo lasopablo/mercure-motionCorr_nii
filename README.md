@@ -33,6 +33,17 @@ The main page displays the system status overview of the Mercure web application
 
 The server must be connected to the Orthanc server, where the processed images can be finally downloaded. It provides detailed configuration options for DICOM nodes, including TLS security settings.
 
+## Analysis Results
+
+This section highlights the performance improvement brought about by the motion correction module implemented in the Mercure system. The graph below illustrates the average residuals between successive volumes for the original DWI image and after applying two different parameters of the motion correction.
+
+The blue line represents the residuals for the original DWI images, showing higher values initially which suggest less accuracy in the volume alignment. The orange and yellow lines represent the residuals after applying two different configurations of the motion correction algorithm. Both show significantly reduced residuals, indicating a marked improvement in alignment accuracy across the series of volumes.
+
+![Residuals Analysis](imgs/residuals.png)
+
+These results underscore the effectiveness of our motion correction techniques in enhancing the precision of medical imaging data analysis.
+
+
 ## Contributions
 
 Contributions are welcome! Please fork this repository and submit a pull request with your enhancements. For major changes, please open an issue first to discuss what you would like to change.
