@@ -36,7 +36,3 @@ The server must be connected to the Orthanc server, where the processed images c
 ## Contributions
 
 Contributions are welcome! Please fork this repository and submit a pull request with your enhancements. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
