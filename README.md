@@ -17,7 +17,7 @@ Mercure is a robust web-based orchestration system designed to manage and monito
 
 ## Getting Started
 
-To get started with Mercure, clone this repository and follow the setup instructions provided in the [official Mercure documentation](https://mercure-imaging.org/docs/#).
+To get started with Mercure, clone this repository (or download from Docker) and follow the setup instructions provided in the [official Mercure documentation](https://mercure-imaging.org/docs/#).
 
 ## Screenshots
 
