@@ -1,5 +1,5 @@
-# Motion Correction (Mercure module) 
-This software can be set up as a module on [Mercure](https://mercure-imaging.org/docs/#) DICOM router. It will take the fMRI images as input and apply an ANTs motion correction algorithm in 4D. 
+# Motion Correction (Mercure module) module running on AWS (EC2) server
+This software can be set up as a module on [Mercure](https://mercure-imaging.org/docs/#) DICOM router, which must also be cofigured on an AWS EC2 instance. It will take the fMRI images as input and apply an ANTs motion correction algorithm in 4D. 
 
 ### Docker:
 ``plasomicsi/mercure-motioncorr_nii:latest``
